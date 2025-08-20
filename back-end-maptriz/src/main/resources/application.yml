@@ -1,0 +1,13 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    url: "jdbc:mysql://localhost:3306/agenda"
+    username: "agenda_user"
+    password: "agenda_password"
+  jpa:
+    hibernate:
+      ddl-auto: update
+      show-sql: true
+jwt:
+  secret: 5bfc92fb0c588fc2dd0fefa2b0e2acc367a201a1fa4b7e2121e58898413c8f3f0544bf9788a33ad2b8b878e2cb9e6f4578a50008ae71de13b4c9fbff86a7b3c4
