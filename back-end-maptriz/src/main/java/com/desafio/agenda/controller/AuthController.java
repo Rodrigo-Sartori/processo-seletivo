@@ -1,6 +1,7 @@
 package com.desafio.agenda.controller;
 
 
+import com.desafio.agenda.controller.dto.TokenDTO;
 import com.desafio.agenda.controller.dto.UserDTO;
 import com.desafio.agenda.service.UserService;
 import lombok.RequiredArgsConstructor;
