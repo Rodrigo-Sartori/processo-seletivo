@@ -1,0 +1,15 @@
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.full-width {
+  width: 100%;
+}
+.error-message {
+  color: red;
+  margin-bottom: 12px;
+}

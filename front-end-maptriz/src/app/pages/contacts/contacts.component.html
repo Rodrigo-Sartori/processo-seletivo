@@ -1,0 +1,32 @@
+<div class="contacts-container">
+  <h2>Lista de Contatos</h2>
+  <button mat-raised-button color="primary" (click)="addContact()">
+    Novo Contato
+  </button>
+
+  <div class="cards-grid">
+    <mat-card *ngFor="let contact of contacts$ | async" class="contact-card">
+      <mat-card-header>
+        <mat-card-title>{{ contact.name }}</mat-card-title>
+        <mat-card-subtitle>{{ contact.document }}</mat-card-subtitle>
+      </mat-card-header>
+
+      <mat-card-content>
+        <p><strong>Telefone:</strong> {{ contact.phoneNumber }}</p>
+        <p><strong>Descrição:</strong> {{ contact.description }}</p>
+
+        <h4>Endereço</h4>
+        <p>{{ contact.createAddressDTO.street }}, Nº {{ contact.createAddressDTO.number }}</p>
+        <p>{{ contact.createAddressDTO.district }} - CEP: {{ contact.createAddressDTO.cep }}</p>
+        <p *ngIf="contact.createAddressDTO.complement">
+          Complemento: {{ contact.createAddressDTO.complement }}
+        </p>
+      </mat-card-content>
+
+      <mat-card-actions>
+        <button mat-raised-button color="primary" (click)="editContact(contact)">Editar</button>
+        <button mat-raised-button color="warn" (click)="deleteContact(contact)">Excluir</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
